@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title><%= title %></title>
+  </head>
+  <body class="wrapper">
+    <h1><%= title %></h1>
+    <a href="/new" class="add-new-message-btn">Add new message</a>
+    <ul>
+      <% for(const message of messages) { %>
+      <li class="message-card">
+        <div class="message-content">
+          <h2><%= message.message %></h2>
+          <p><%= message.author %></p>
+        </div>
+        <div class="message-actions">
+          <a href="/message/<%= message._id %>" class="open-link">Open</a>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
