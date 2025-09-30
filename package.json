@@ -4,9 +4,8 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start:dev": "dotenvx run -f .env.development -- node --watch  app.js",
-		"start:prod": "dotenvx run -f .env.production -- node app.js",
-		"populatedb": "dotenvx run -f .env.development -- node db/populatedb.js"
+		"dev": "node --watch  app.js",
+		"populatedb": "node -r dotenv/config db/populatedb.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -17,7 +16,7 @@
 		"pg": "^8.16.3"
 	},
 	"devDependencies": {
-		"@dotenvx/dotenvx": "^1.51.0",
+		"dotenv": "^17.2.3",
 		"express": "^5.1.0"
 	}
 }
