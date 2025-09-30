@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const formRouter = Router();
 
-const { addMessage } = require("../db");
+const { addMessage } = require("../db/queries");
 
 formRouter.get("/", (_req, res) => res.render("form"));
 formRouter.post("/", (req, res) => {

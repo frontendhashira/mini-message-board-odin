@@ -1,7 +1,7 @@
 const CustomNotFoundError = require("../errors/CustomNotFoundError");
-const { getMessage } = require("../db");
+const { getMessage } = require("../db/queries");
 
-const getMessageById = async (req, res, _next) => {
+const getMessageById = async (req, res) => {
 	const { messageId } = req.params;
 
 	const message = await getMessage(messageId);

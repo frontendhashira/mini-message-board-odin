@@ -1,3 +1,5 @@
+require("@dotenvx/dotenvx").config();
+
 const express = require("express");
 const app = express();
 const path = require("node:path");
@@ -18,11 +20,10 @@ app.use("/new", formRouter);
 app.use("/", indexRouter);
 app.use((err, _req, res, _next) => {
 	console.error(err);
-
 	res.status(err.statusCode || 500).send(err.message);
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT;
 app.listen(PORT, (error) => {
 	if (error) throw error;
 	console.log(`listening on port ${PORT}!`);

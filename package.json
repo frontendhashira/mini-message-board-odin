@@ -1,18 +1,23 @@
 {
-  "name": "mini-message-board",
-  "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "ejs": "^3.1.10"
-  },
-  "devDependencies": {
-    "express": "^5.1.0"
-  }
+	"name": "mini-message-board",
+	"version": "1.0.0",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start:dev": "dotenvx run -f .env.development -- node --watch  app.js",
+		"start:prod": "dotenvx run -f .env.production -- node app.js",
+		"populatedb": "dotenvx run -f .env.development -- node db/populatedb.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"pg": "^8.16.3"
+	},
+	"devDependencies": {
+		"@dotenvx/dotenvx": "^1.51.0",
+		"express": "^5.1.0"
+	}
 }
