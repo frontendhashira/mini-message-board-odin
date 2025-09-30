@@ -23,7 +23,7 @@ app.use((err, _req, res, _next) => {
 	res.status(err.statusCode || 500).send(err.message);
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, (error) => {
 	if (error) throw error;
 	console.log(`listening on port ${PORT}!`);
