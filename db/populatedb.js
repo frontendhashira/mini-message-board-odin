@@ -21,6 +21,9 @@ async function main() {
 	console.log("seeding...");
 	const client = new Client({
 		connectionString,
+		ssl: {
+			rejectUnauthorized: false, // required for Railway sometimes
+		},
 	});
 	await client.connect();
 	await client.query(SQL);
