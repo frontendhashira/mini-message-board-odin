@@ -1,1 +1,1 @@
-IF RENDER IS DOWN ==> https://mini-message-board-odin-production.up.railway.app/
+IF RAILWAY SERVICE IS DOWN ==> https://mini-message-board-odin.onrender.com/
