@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Form</title>
+    <title>Create message</title>
   </head>
   <body>
+    <h1 style="text-align: center">Create Message</h1>
+    <%- include("partials/errors") %>
     <form action="/new" method="POST" class="message-form">
       <div class="form-group">
         <label for="author">Author:</label>
@@ -18,5 +20,7 @@
       </div>
       <button type="submit" class="submit-btn">Submit</button>
     </form>
+
+    <a href="/" style="text-align: center; display: block">Home</a>
   </body>
 </html>
